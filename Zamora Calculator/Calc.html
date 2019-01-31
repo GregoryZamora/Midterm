@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Calculator</title>
+	<link rel ="stylesheet" type ="text/css" href = "design.css">
+</head>
+<body>
+	<div id = "main" align="center">
+		<table>
+			<tr>
+				<td><input type = "text" name = "display" id = "display"></input>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><button onclick="aa()">1</button></td>
+				<td><button onclick="bb()">2</button></td>
+				<td><button onclick="cc()">3</button></td>
+				<td><button onclick="dd()">4</button></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><button onclick="gg()">5</button></td>
+				<td><button onclick="hh()">6</button></td>
+				<td><button onclick="ii()">7</button></td>
+				<td><button onclick="jj()">8</button></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><button onclick="mm()">9</button></td>
+				<td><button onclick="nn()">0</button></td>
+				<td><button onclick="pp()">-</button></td>
+				<td><button onclick="oo()">+</button></td>
+			</tr>
+		</table>
+			<td>
+				<tr>
+				<td><button onclick="qq()">C</button></td>
+				<td><button onclick="kk()">%</button></td>
+				<td><button onclick="ee()">*</button></td>
+				<td><button onclick="ff()">/</button></td>
+			</tr>
+			</td>
+			<table>
+				<tr>
+					<td>
+						<td><button onclick="ll()"  id = "equals">=</button></td>
+					</td>
+				</tr>
+			</table>
+</body>
+</html>
+<script type="text/javascript">
+	let n1 = "";
+	let n2 = "";
+	let operate = "";
+
+
+	function qq(){
+ 	document.getElementById('display').value = "";
+ }
+
+	function oo(){
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value = "";
+		operate="+";
+	}
+
+	function  pp(){
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value = "";
+		operate="-";
+
+	}
+
+	function  ee(){
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value = "";
+		operate="*";
+
+	}
+
+	function  ff(){
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value = "";
+		operate="/";
+
+	}
+	function  kk(){
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value = "";
+		operate="%";
+
+	}
+	function ll(){
+		if (operate == "+"){
+			n2 = document.getElementById('display').value;
+			document.getElementById('display').value = parseFloat(n1) + parseFloat(n2);
+		}
+		else if(operate == "-"){
+			n2 = document.getElementById('display').value;
+			document.getElementById('display').value = parseFloat(n1) - parseFloat(n2);
+		}
+		else if(operate == "*"){
+			n2 = document.getElementById('display').value;
+			document.getElementById('display').value = parseFloat(n1) * parseFloat(n2);
+		}
+		else if(operate == "/"){
+			n2 = document.getElementById('display').value;
+			document.getElementById('display').value = parseFloat(n1) / parseFloat(n2);
+		}
+		else{
+			n2 = document.getElementById('display').value;
+			document.getElementById('display').value = parseFloat(n1) % parseFloat(n2);
+		}
+	}
+
+
+ 
+
+
+	function aa(){
+		document.getElementById('display').value += "1";
+	}
+	function bb(){
+		document.getElementById('display').value += '2';
+	}
+	function cc(){
+		document.getElementById('display').value += '3';
+	}
+	function dd(){
+		document.getElementById('display').value += '4';
+	}
+	function gg(){
+		document.getElementById('display').value += '5';
+	}
+	function hh(){
+		document.getElementById('display').value += '6';
+	}
+	function ii(){
+		document.getElementById('display').value += '7';
+	}
+	function jj(){
+		document.getElementById('display').value += '8';
+	}
+	function mm(){
+		document.getElementById('display').value += '9';
+	}
+	function nn(){
+		document.getElementById('display').value += '0';
+	}
+
+</script>

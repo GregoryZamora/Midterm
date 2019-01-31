@@ -1,0 +1,21 @@
+
+body{
+	background-color: gray;
+}
+button{
+	padding: 20px;
+	text-align: center;
+	border-radius: 360px;
+	border-color: orange;
+
+}
+
+
+#equals{
+	width: 223px;
+}
+
+input{width: 445px;
+	height: 40px;
+position: center;
+border-radius: 360px;}
